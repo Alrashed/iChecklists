@@ -45,6 +45,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gdB-FS-fUe">
                             <connections>
                                 <action selector="addItem" destination="zRG-jX-dec" id="Lto-we-YYn"/>
+                                <segue destination="ouc-r3-53F" kind="presentation" identifier="addItem" id="Ale-e1-VUn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -52,6 +53,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJ2-vF-r0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="825" y="55"/>
+        </scene>
+        <!--Add/Edit Item-->
+        <scene sceneID="qsO-0o-L7Y">
+            <objects>
+                <tableViewController id="pSF-JO-MB5" customClass="ItemDetailViewController" customModule="iChecklists" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="TPq-ro-tE8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="IQ0-Q3-2Yk">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zRa-bb-JzW">
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zRa-bb-JzW" id="qnk-Mp-v35">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzP-m4-14R">
+                                                    <rect key="frame" x="8" y="11" width="299" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="pSF-JO-MB5" id="DBp-hp-8n4"/>
+                            <outlet property="delegate" destination="pSF-JO-MB5" id="Fbe-Df-YtM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add/Edit Item" id="cXD-zU-e2O">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="naO-kB-YM3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="18I-RQ-huY"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0F-M3-fE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2244.375" y="54.929577464788736"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y3y-Hi-mDl">
@@ -70,6 +116,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9t-hV-jXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112.5" y="54.929577464788736"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FdO-E4-nGh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ouc-r3-53F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="54Y-dO-eju">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pSF-JO-MB5" kind="relationship" relationship="rootViewController" id="bRG-AV-Sit"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgX-6W-Nty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="55"/>
         </scene>
     </scenes>
 </document>

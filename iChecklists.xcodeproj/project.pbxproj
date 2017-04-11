@@ -13,6 +13,7 @@
 		E99D43C01E9D423000513E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E99D43BE1E9D423000513E84 /* LaunchScreen.storyboard */; };
 		E99D43C81E9D47DD00513E84 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D43C71E9D47DD00513E84 /* ChecklistViewController.swift */; };
 		E99D43CA1E9D5C0600513E84 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D43C91E9D5C0600513E84 /* ChecklistItem.swift */; };
+		E99D43CC1E9D9F8800513E84 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D43CB1E9D9F8800513E84 /* ItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E99D43C11E9D423000513E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E99D43C71E9D47DD00513E84 /* ChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		E99D43C91E9D5C0600513E84 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		E99D43CB1E9D9F8800513E84 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E99D43B51E9D423000513E84 /* AppDelegate.swift */,
 				E99D43C91E9D5C0600513E84 /* ChecklistItem.swift */,
 				E99D43C71E9D47DD00513E84 /* ChecklistViewController.swift */,
+				E99D43CB1E9D9F8800513E84 /* ItemDetailViewController.swift */,
 				E99D43B91E9D423000513E84 /* Main.storyboard */,
 				E99D43BE1E9D423000513E84 /* LaunchScreen.storyboard */,
 				E99D43BC1E9D423000513E84 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			files = (
 				E99D43B61E9D423000513E84 /* AppDelegate.swift in Sources */,
 				E99D43CA1E9D5C0600513E84 /* ChecklistItem.swift in Sources */,
+				E99D43CC1E9D9F8800513E84 /* ItemDetailViewController.swift in Sources */,
 				E99D43C81E9D47DD00513E84 /* ChecklistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
