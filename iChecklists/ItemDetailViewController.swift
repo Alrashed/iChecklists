@@ -9,8 +9,17 @@
 import UIKit
 
 class ItemDetailViewController: UITableViewController {
-
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func cancel() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func done() {
+        dismiss(animated: true, completion: nil)
     }
 }
