@@ -9,7 +9,14 @@
 import UIKit
 
 class ChecklistViewController: UITableViewController {
-
+    var row0text = "label 1"
+    var row1text = "label 2"
+    var row2text = "lable 3"
+    
+    var row0checked = false
+    var row1checked = false
+    var row2checked = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,25 +33,48 @@ class ChecklistViewController: UITableViewController {
         let label = cell.viewWithTag(1000) as! UILabel
         
         if  indexPath.row == 0 {
-            label.text = "label 1"
+            label.text = row0text
         } else if indexPath.row == 1 {
-            label.text = "label 2"
+            label.text = row1text
         } else if indexPath.row == 2 {
-            label.text = "label 3"
+            label.text = row2text
         }
         
+        configureCheckmark(for: cell, at: indexPath)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
-            if cell.accessoryType == .none {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
+            
+            if indexPath.row == 0 {
+                row0checked = !row0checked
+            } else if indexPath.row == 1 {
+                row1checked = !row1checked
+            } else if indexPath.row == 2 {
+                row2checked = !row2checked
             }
+            
+            configureCheckmark(for: cell, at: indexPath)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func configureCheckmark(for cell: UITableViewCell, at indexPath: IndexPath) {
+        var isChecked = false
+        
+        if indexPath.row == 0 {
+            isChecked = row0checked
+        } else if indexPath.row == 1 {
+            isChecked = row1checked
+        } else if indexPath.row == 2 {
+            isChecked = row2checked
         }
         
-        tableView.deselectRow(at: indexPath, animated: true)
+        if isChecked {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
     }
 }
