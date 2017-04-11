@@ -31,7 +31,7 @@ class ChecklistViewController: UITableViewController {
         
         let row3item = ChecklistItem()
         row3item.text = "label 4"
-        row3item.checked = false
+        row3item.checked = true
         items.append(row3item)
         
         super.init(coder: aDecoder)
@@ -52,9 +52,7 @@ class ChecklistViewController: UITableViewController {
         
         let item = items[indexPath.row]
         
-        let label = cell.viewWithTag(1000) as! UILabel
-        label.text = item.text
-        
+        configureText(for: cell, with: item)
         configureCheckmark(for: cell, with: item)
         return cell
     }
@@ -70,11 +68,15 @@ class ChecklistViewController: UITableViewController {
     }
     
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
-        
         if item.checked {
             cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none
         }
+    }
+    
+    func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
+        let label = cell.viewWithTag(1000) as! UILabel
+        label.text = item.text
     }
 }
