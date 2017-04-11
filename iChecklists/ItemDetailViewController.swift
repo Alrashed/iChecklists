@@ -15,6 +15,10 @@ class ItemDetailViewController: UITableViewController {
         super.viewDidLoad()
     }
     
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        return nil
+    }
+    
     @IBAction func cancel() {
         dismiss(animated: true, completion: nil)
     }
