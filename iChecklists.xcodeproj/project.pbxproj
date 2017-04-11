@@ -57,8 +57,8 @@
 				E99D43B51E9D423000513E84 /* AppDelegate.swift */,
 				E99D43C71E9D47DD00513E84 /* ChecklistViewController.swift */,
 				E99D43B91E9D423000513E84 /* Main.storyboard */,
-				E99D43BC1E9D423000513E84 /* Assets.xcassets */,
 				E99D43BE1E9D423000513E84 /* LaunchScreen.storyboard */,
+				E99D43BC1E9D423000513E84 /* Assets.xcassets */,
 				E99D43C11E9D423000513E84 /* Info.plist */,
 			);
 			path = iChecklists;
