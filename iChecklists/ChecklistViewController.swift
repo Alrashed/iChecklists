@@ -78,4 +78,16 @@ class ChecklistViewController: UITableViewController {
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
     }
+    
+    @IBAction func addItem() {
+        let rowIndex = items.count
+        
+        let newItem = ChecklistItem()
+        newItem.text = "test addItem"
+        newItem.checked = false
+        items.append(newItem)
+        
+        let indexPath = IndexPath(row: rowIndex, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
 }
