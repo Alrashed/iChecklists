@@ -18,22 +18,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="FcI-gN-zIa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="FcI-gN-zIa">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FcI-gN-zIa" id="k08-jM-AGR">
-                                    <rect key="frame" x="0.0" y="0.0" width="281" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KH-18-HCL">
-                                            <rect key="frame" x="18" y="12" width="255" height="21"/>
+                                            <rect key="frame" x="38" y="12" width="215" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="✓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4g-Na-Kix">
+                                            <rect key="frame" x="8" y="12" width="25" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ouc-r3-53F" kind="presentation" identifier="EditItem" trigger="accessoryAction" id="i5R-wl-h9H"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,16 +54,16 @@
                     <navigationItem key="navigationItem" title="Checklists" id="LPy-2B-zdk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gdB-FS-fUe">
                             <connections>
-                                <segue destination="ouc-r3-53F" kind="presentation" identifier="addItem" id="Ale-e1-VUn"/>
+                                <segue destination="ouc-r3-53F" kind="presentation" identifier="AddItem" id="Ale-e1-VUn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJ2-vF-r0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="55"/>
+            <point key="canvasLocation" x="825" y="54.929577464788736"/>
         </scene>
-        <!--Add/Edit Item-->
+        <!--Add Item-->
         <scene sceneID="qsO-0o-L7Y">
             <objects>
                 <tableViewController id="pSF-JO-MB5" customClass="ItemDetailViewController" customModule="iChecklists" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,7 +103,7 @@
                             <outlet property="delegate" destination="pSF-JO-MB5" id="Fbe-Df-YtM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add/Edit Item" id="cXD-zU-e2O">
+                    <navigationItem key="navigationItem" title="Add Item" id="cXD-zU-e2O">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="naO-kB-YM3">
                             <connections>
                                 <action selector="cancel" destination="pSF-JO-MB5" id="aEB-dw-1lc"/>
@@ -151,4 +161,7 @@
             <point key="canvasLocation" x="1536" y="55"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="i5R-wl-h9H"/>
+    </inferredMetricsTieBreakers>
 </document>
