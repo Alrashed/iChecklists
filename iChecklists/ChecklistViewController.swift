@@ -11,13 +11,6 @@ import UIKit
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
     var checklist: Checklist!
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        //print("Documents folder is \(documentsDirectory())")
-        //print("Data file path is \(dataFilePath())")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
