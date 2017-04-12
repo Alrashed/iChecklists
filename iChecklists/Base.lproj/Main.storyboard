@@ -78,6 +78,10 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done" destination="pSF-JO-MB5" eventType="editingDidEndOnExit" id="fjq-wG-LU3"/>
+                                                        <outlet property="delegate" destination="pSF-JO-MB5" id="GKH-TP-Aqk"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -96,13 +100,14 @@
                                 <action selector="cancel" destination="pSF-JO-MB5" id="aEB-dw-1lc"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="18I-RQ-huY">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="18I-RQ-huY">
                             <connections>
                                 <action selector="done" destination="pSF-JO-MB5" id="72D-9P-It8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneBarButton" destination="18I-RQ-huY" id="BHo-KI-Pdx"/>
                         <outlet property="textField" destination="WGG-zx-h5u" id="Et4-CH-j64"/>
                     </connections>
                 </tableViewController>
