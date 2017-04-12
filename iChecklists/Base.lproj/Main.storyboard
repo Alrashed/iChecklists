@@ -44,7 +44,6 @@
                     <navigationItem key="navigationItem" title="Checklists" id="LPy-2B-zdk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gdB-FS-fUe">
                             <connections>
-                                <action selector="addItem" destination="zRG-jX-dec" id="Lto-we-YYn"/>
                                 <segue destination="ouc-r3-53F" kind="presentation" identifier="addItem" id="Ale-e1-VUn"/>
                             </connections>
                         </barButtonItem>

@@ -34,13 +34,14 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func cancel() {
-        dismiss(animated: true, completion: nil)
+        delegate?.itemDetailViewControllerDidCancel(self)
     }
     
     @IBAction func done() {
-        print("Content of text field: \(textField.text!)")
+        let item = ChecklistItem()
+        item.text = textField.text!
         
-        dismiss(animated: true, completion: nil)
+        delegate?.itemDetailViewController(self, didFinishAdding: item)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
