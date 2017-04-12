@@ -104,4 +104,15 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         }
         dismiss(animated: true, completion: nil)
     }
+    
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let navigationController = storyboard!.instantiateViewController(withIdentifier: "ListDetailNavigationViewController") as! UINavigationController
+        let controller = navigationController.topViewController as! ListDetailViewController
+        controller.delegate = self
+        
+        let checklist = lists[indexPath.row]
+        controller.checklistToEdit = checklist
+        
+        present(navigationController, animated: true, completion: nil)
+    }
 }
