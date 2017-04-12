@@ -9,10 +9,16 @@
 import UIKit
 
 class ItemDetailViewController: UITableViewController {
+    
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        textField.becomeFirstResponder()
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -24,6 +30,8 @@ class ItemDetailViewController: UITableViewController {
     }
     
     @IBAction func done() {
+        print("Content of text field: \(textField.text!)")
+        
         dismiss(animated: true, completion: nil)
     }
 }
