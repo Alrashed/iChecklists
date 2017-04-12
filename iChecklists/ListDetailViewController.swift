@@ -10,8 +10,8 @@ import UIKit
 
 protocol ListDetailViewControllerDelegate: class {
     func listDetailViewControllerDidCancel(_ controller: ListDetailViewController)
-    func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding list: Checklist)
-    func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing list: Checklist)
+    func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding checklist: Checklist)
+    func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing checklist: Checklist)
 }
 
 class ListDetailViewController: UITableViewController, UITextFieldDelegate {
@@ -20,14 +20,14 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
     weak var delegate: ListDetailViewControllerDelegate?
-    var listToEdit: Checklist?
+    var checklistToEdit: Checklist?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let list = listToEdit {
+        if let checklist = checklistToEdit {
             title = "Edit list"
-            textField.text = list.name
+            textField.text = checklist.name
             doneBarButton.isEnabled = true
         }
     }
@@ -46,12 +46,12 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func done() {
-        if let list = listToEdit {
-            list.name = textField.text!
-            delegate?.listDetailViewController(self, didFinishEditing: list)
+        if let checklist = checklistToEdit {
+            checklist.name = textField.text!
+            delegate?.listDetailViewController(self, didFinishEditing: checklist)
         } else {
-            let list = Checklist(name: textField.text!)
-            delegate?.listDetailViewController(self, didFinishAdding: list)
+            let checklist = Checklist(name: textField.text!)
+            delegate?.listDetailViewController(self, didFinishAdding: checklist)
         }
     }
     

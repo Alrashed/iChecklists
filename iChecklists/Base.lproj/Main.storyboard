@@ -78,7 +78,7 @@
                                         <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fit-0a-c10" id="uhe-AL-1UJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ps-p8-MLP">
@@ -109,7 +109,7 @@
                                 <action selector="cancel" destination="n2O-5r-UTr" id="uad-bL-zfS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="VJx-0e-hvP">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="VJx-0e-hvP">
                             <connections>
                                 <action selector="done" destination="n2O-5r-UTr" id="92L-sr-6Gn"/>
                             </connections>
