@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9552EFA1E9FE2DB00A8E5CC /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9552EF91E9FE2DB00A8E5CC /* IconPickerViewController.swift */; };
 		E99D43B61E9D423000513E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D43B51E9D423000513E84 /* AppDelegate.swift */; };
 		E99D43BB1E9D423000513E84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E99D43B91E9D423000513E84 /* Main.storyboard */; };
 		E99D43BD1E9D423000513E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E99D43BC1E9D423000513E84 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9552EF91E9FE2DB00A8E5CC /* IconPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconPickerViewController.swift; sourceTree = "<group>"; };
 		E99D43B21E9D423000513E84 /* iChecklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChecklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99D43B51E9D423000513E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E99D43BA1E9D423000513E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				E99D43D11E9DDA5D00513E84 /* ListDetailViewController.swift */,
 				E99D43C71E9D47DD00513E84 /* ChecklistViewController.swift */,
 				E99D43CB1E9D9F8800513E84 /* ItemDetailViewController.swift */,
+				E9552EF91E9FE2DB00A8E5CC /* IconPickerViewController.swift */,
 				E99D43B91E9D423000513E84 /* Main.storyboard */,
 				E99D43BE1E9D423000513E84 /* LaunchScreen.storyboard */,
 				E99D43BC1E9D423000513E84 /* Assets.xcassets */,
@@ -158,6 +161,7 @@
 				E99D43B61E9D423000513E84 /* AppDelegate.swift in Sources */,
 				E99D43D21E9DDA5D00513E84 /* ListDetailViewController.swift in Sources */,
 				E99D43CA1E9D5C0600513E84 /* ChecklistItem.swift in Sources */,
+				E9552EFA1E9FE2DB00A8E5CC /* IconPickerViewController.swift in Sources */,
 				E99D43D01E9DD46200513E84 /* Checklist.swift in Sources */,
 				E99D43CC1E9D9F8800513E84 /* ItemDetailViewController.swift in Sources */,
 				E9C518301E9F008500D7F0C0 /* DataModel.swift in Sources */,
