@@ -103,30 +103,4 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
             }
         }
     }
-    
-//    func documentsDirectory() -> URL {
-//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//        return paths[0]
-//    }
-//    
-//    func dataFilePath() -> URL {
-//        return documentsDirectory().appendingPathComponent("iChecklists.plist")
-//    }
-//    
-//    func saveChecklistItems() {
-//        let data = NSMutableData()
-//        let archiver = NSKeyedArchiver(forWritingWith: data)
-//        archiver.encode(checklist.items, forKey: "ChecklistItems")
-//        archiver.finishEncoding()
-//        data.write(to: dataFilePath(), atomically: true)
-//    }
-//    
-//    func loadChecklistItems() {
-//        let path = dataFilePath()
-//        if let data = try? Data(contentsOf: path) {
-//            let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
-//            checklist.items = unarchiver.decodeObject(forKey: "ChecklistItems") as! [ChecklistItem]
-//            unarchiver.finishDecoding()
-//        }
-//    }
 }
