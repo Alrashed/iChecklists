@@ -13,6 +13,7 @@ class DataModel {
     
     init() {
         loadChecklists()
+        registerDefaults()
     }
     
     func documentsDirectory() -> URL {
@@ -39,5 +40,11 @@ class DataModel {
             lists = unarchiver.decodeObject(forKey: "Checklists") as! [Checklist]
             unarchiver.finishDecoding()
         }
+    }
+    
+    func registerDefaults() {
+        let dictionary: [String: Any] = [ "ChecklistIndex": -1 ]
+        
+        UserDefaults.standard.register(defaults: dictionary)
     }
 }
