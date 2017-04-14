@@ -177,4 +177,8 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
             tableView.endUpdates()
         }
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        hideDatePicker()
+    }
 }
