@@ -97,6 +97,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         
         let indexPathDatePicker = IndexPath(row: 2, section: 1)
         tableView.insertRows(at: [indexPathDatePicker], with: .fade)
+        datePicker.setDate(dueDate, animated: false)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -138,5 +139,10 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         if indexPath.section == 1 && indexPath.row == 1 {
             showDatePicker()
         }
+    }
+    
+    @IBAction func dateChanged(_ datePicker: UIDatePicker) {
+        dueDate = datePicker.date
+        updateDueDateLabel()
     }
 }
