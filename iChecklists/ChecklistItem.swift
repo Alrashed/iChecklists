@@ -61,8 +61,7 @@ class ChecklistItem: NSObject, NSCoding {
             
             let center = UNUserNotificationCenter.current()
             center.add(request)
-            
-            print("Scheduled notification \(request) for itemID \(itemID)")
+            //print("Scheduled notification \(request) for itemID \(itemID)")
         }
     }
     
