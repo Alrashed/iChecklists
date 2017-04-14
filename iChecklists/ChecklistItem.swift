@@ -70,4 +70,8 @@ class ChecklistItem: NSObject, NSCoding {
         let center = UNUserNotificationCenter.current()
         center.removePendingNotificationRequests(withIdentifiers: ["\(itemID)"])
     }
+    
+    deinit {
+        removeNotification()
+    }
 }
