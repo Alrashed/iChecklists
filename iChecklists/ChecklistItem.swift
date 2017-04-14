@@ -45,6 +45,8 @@ class ChecklistItem: NSObject, NSCoding {
     }
     
     func scheduleNotification() {
+        removeNotification()
+        
         if shouldRemind && dueDate > Date() {
             let content = UNMutableNotificationContent()
             content.title = "Reminder:"
@@ -55,7 +57,6 @@ class ChecklistItem: NSObject, NSCoding {
             let components = calendar.dateComponents([.month, .day, .hour, .minute], from: dueDate)
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-            
             let request = UNNotificationRequest(identifier: "\(itemID)", content: content, trigger: trigger)
             
             let center = UNUserNotificationCenter.current()
@@ -63,5 +64,10 @@ class ChecklistItem: NSObject, NSCoding {
             
             print("Scheduled notification \(request) for itemID \(itemID)")
         }
+    }
+    
+    func removeNotification() {
+        let center = UNUserNotificationCenter.current()
+        center.removePendingNotificationRequests(withIdentifiers: ["\(itemID)"])
     }
 }
