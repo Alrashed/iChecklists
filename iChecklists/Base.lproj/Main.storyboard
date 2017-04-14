@@ -333,7 +333,7 @@
                         <outlet property="datePicker" destination="mpH-TY-5rc" id="Ymh-Ms-3ro"/>
                         <outlet property="datePickerCell" destination="JBF-pF-wDU" id="JQW-AU-i4x"/>
                         <outlet property="doneBarButton" destination="18I-RQ-huY" id="BHo-KI-Pdx"/>
-                        <outlet property="dueDateLabel" destination="1tI-Vt-eEf" id="hYY-EB-8Hj"/>
+                        <outlet property="dueDateLabel" destination="vHP-Ua-8ay" id="vER-7y-UAb"/>
                         <outlet property="shouldRemindSwitch" destination="DF6-5L-WLo" id="ZNP-Qg-4TT"/>
                         <outlet property="textField" destination="WGG-zx-h5u" id="Et4-CH-j64"/>
                     </connections>

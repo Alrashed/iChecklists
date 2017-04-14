@@ -88,15 +88,25 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     func updateDueDateLabel() {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
-        formatter.timeStyle = .none
+        formatter.timeStyle = .short
         dueDateLabel.text = formatter.string(from: dueDate)
     }
     
     func showDatePicker() {
         datePickerVisible = true
         
+        let indexPathDateRow = IndexPath(row: 1, section: 1)
         let indexPathDatePicker = IndexPath(row: 2, section: 1)
+        
+        if let dateCell = tableView.cellForRow(at: indexPathDateRow) {
+            dateCell.detailTextLabel!.textColor = dateCell.detailTextLabel!.tintColor
+        }
+        
+        tableView.beginUpdates()
         tableView.insertRows(at: [indexPathDatePicker], with: .fade)
+        tableView.reloadRows(at: [indexPathDateRow], with: .none)
+        tableView.endUpdates()
+        
         datePicker.setDate(dueDate, animated: false)
     }
     
