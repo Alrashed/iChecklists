@@ -337,6 +337,28 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0F-M3-fE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="JBF-pF-wDU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JBF-pF-wDU" id="G8I-pf-ObG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="216.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mpH-TY-5rc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="513823056.43422401">
+                                    <!--2017-04-14 00:37:36 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mpH-TY-5rc" firstAttribute="leading" secondItem="G8I-pf-ObG" secondAttribute="leading" id="0Y3-Ti-Ror"/>
+                            <constraint firstItem="mpH-TY-5rc" firstAttribute="top" secondItem="G8I-pf-ObG" secondAttribute="top" id="8cm-oz-pam"/>
+                            <constraint firstAttribute="trailing" secondItem="mpH-TY-5rc" secondAttribute="trailing" id="EMA-lV-NSQ"/>
+                            <constraint firstAttribute="bottom" secondItem="mpH-TY-5rc" secondAttribute="bottom" id="zL1-nc-WZF"/>
+                        </constraints>
+                    </tableViewCellContentView>
+                </tableViewCell>
             </objects>
             <point key="canvasLocation" x="2244.375" y="54.929577464788736"/>
         </scene>
